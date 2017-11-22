@@ -1,0 +1,21 @@
+language: node_js
+sudo: false
+node_js:
+  - "7.10.0"
+
+install:
+  - npm install
+  - npm 
+
+before_script: 
+  - chmod 0777 ./node_modules/.bin/mocha 
+
+script:
+  - npm test
+
+notifications:
+  email:
+    recipients:
+      - mcvarona@up.edu.ph
+    on_success: always # default: change
+    on_failure: always # default: always
