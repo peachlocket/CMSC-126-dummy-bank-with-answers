@@ -5,6 +5,11 @@ node_js:
 
 install:
   - npm install
+  - npm install mocha
+  - npm install chai
+  - npm install sinon
+  - npm install axios
+  - npm install cheerio
 
 before_script: 
   - chmod 0777 ./node_modules/.bin/mocha 
@@ -16,5 +21,5 @@ notifications:
   email:
     recipients:
       - mcvarona@up.edu.ph
-    on_success: never # default: change
-    on_failure: never # default: always
+    on_success: always # default: change
+    on_failure: always # default: always
